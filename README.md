@@ -22,21 +22,12 @@ This demo showcases:
 
 ## Quickstart
 
-
 ### Install Dependencies
 
 In the root of the repo run:
 
 ```bash
 npm install
-```
-
-## Start the HTTP Server
-
-In the root of the repo run:
-
-```bash
-npm start
 ```
 
 ### Add your Deepgram API Key
@@ -48,6 +39,39 @@ In [config.js](./js/config.js) add your API Key.
 ```js
   let ws = new WebSocket("wss://agent.deepgram.com/agent", ["token", "<your-api-key-here>"]);
 ```
+
+## Start the HTTP Server
+
+In the root of the repo run:
+
+```bash
+npm start
+```
+
+### Set your Amazon Bedrock LLM Provider URL
+
+> See The [Deepgram Voice Agent LLM Client Proxy Repo](https://github.com/deepgram-devs/deepgram-voice-agent-client-llm-proxy) for a Chat Completion Proxy Server you can run locally using NGROK.
+
+In [config.js](./js/config.js) set your Provider URL and key
+
+```javascript
+
+        agent: {
+            ...baseConfig.agent,
+            think: {
+                provider: {
+                    type: "bedrock",
+                    url: "your-bedrock-llm-url",
+                    key: "your-bedrock-key",
+                },
+                model: "your-bedrock-model",
+                instructions: ` Your LLM instructions and prompts`,
+
+            }
+        },
+```
+
+
 
 ## Development and Contributing
 

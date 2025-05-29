@@ -30,12 +30,12 @@ function getStsConfig(callID) {
         agent: {
             ...baseConfig.agent,
             think: {
-                provider: {
+                provider: { //@TODO test out this functionality with a new AWS bedrock endpoint that I can use to help write our Docs
                     type: "custom",
-                    url: "http://Bedroc-Proxy-3R3wyfMzoB0J-189585684.us-east-1.elb.amazonaws.com/api/v1/chat/completions",  // @TODO change out the bedrock URL with  https://github.com/Jacob-Lasky/deepgram-voice-agent-client-llm-proxy
-                    key: "a5gf-fjn7-oi92-cg54",
+                    url: "http://Bedroc-Proxy-3R3wyfMzoB0J-189585684.us-east-1.elb.amazonaws.com/api/v1/chat/completions",  // Change the example URL to your bedrock URL
+                    key: "a5gf-fjn7-oi92-cg54", // Change the example key to your bedrock key
                 },
-                model: "anthropic.claude-3-sonnet-20240229-v1:0",
+                model: "anthropic.claude-3-sonnet-20240229-v1:0", // Change the example model to your bedrock model
                 instructions: `
 Keep your responses short max 1-2 sentences.
 
