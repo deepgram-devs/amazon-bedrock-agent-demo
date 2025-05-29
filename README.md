@@ -72,7 +72,6 @@ In [config.js](./js/config.js) set your Provider URL and key
 ```
 
 
-
 ## Development and Contributing
 
 Interested in contributing? We ❤️ pull requests!
