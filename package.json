@@ -1,0 +1,14 @@
+{
+  "name": "amazon-bedrock-agent-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server"
+  },
+  "author": "Deepgram",
+  "license": "MIT",
+  "description": "A simple open enrollment voice agent built with the Deepgram Agent API and Amazon Bedrock",
+  "dependencies": {
+    "http-server": "^14.1.1"
+  }
+}
